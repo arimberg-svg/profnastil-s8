@@ -331,6 +331,29 @@
       text-decoration: none;
       color: inherit;
     }
+    a.row.pic {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+    a.row.pic img,
+    img.shot {
+      width: 100%;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 10px;
+    }
+    a.row.pic img {
+      width: 96px;
+      height: 96px;
+    }
+    img.shot {
+      height: 160px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    a.row .txt strong { font-size: 1.05rem; }
     a.row:hover { box-shadow: 0 10px 24px rgba(66, 8, 168, 0.12); }
     a.row strong {
       display: block;
@@ -535,6 +558,23 @@
 
       <h3 class="lbl" style="margin-top:18px">Шуруп в цвет листа</h3>
       <p>Шуруп называется «саморез кровельный». Под шляпкой должна быть резинка: она закрывает дырку, и туда не заходит вода. Цвет шляпки такой же, как у листа. Каркас из железных труб: берите размер 5,5×19. Каркас из деревянного бруска: берите 4,8×35. Резинку прижимают плотно, но лист не продавливают.</p>
+      <div class="goods" style="margin-top:12px">
+        <article class="card">
+          <img class="shot" src="assets/photos/samorez-8017.jpg" alt="Коричневый шуруп с резинкой под шляпкой">
+          <h3>Коричневый</h3>
+          <p>Так выглядит шуруп RAL&nbsp;8017. Резинка уже на нём.</p>
+        </article>
+        <article class="card">
+          <img class="shot" src="assets/photos/samorez-7024.jpg" alt="Серый шуруп с чёрной резинкой под шляпкой">
+          <h3>Серый</h3>
+          <p>Так выглядит шуруп RAL&nbsp;7024. Резинка чёрная, шляпка серая.</p>
+        </article>
+        <article class="card">
+          <img class="shot" src="assets/photos/samorez-cink.jpg" alt="Светлый цинковый шуруп с резинкой">
+          <h3>Цинк</h3>
+          <p>Светлый шуруп к цинковому листу. Резинка тоже на месте.</p>
+        </article>
+      </div>
       <div class="table-wrap" style="margin-top:10px">
         <table>
           <thead>
@@ -568,17 +608,26 @@
       <h3 class="lbl" style="margin-top:22px">Столбы и поперечины</h3>
       <p>Столб: квадратная труба 60 на 60, длина 3&nbsp;метра. Около метра уходит в землю, два метра остаются сверху. Это как раз высота нашего листа. Сверху на каждый столб надевают заглушку, чтобы дождь не лился внутрь трубы. Поперёк столбов крепят три трубы 40 на 20, тоже по 3&nbsp;метра: внизу, посередине и вверху. На них и прикручивают лист.</p>
       <div class="links">
-        <a class="row" href="https://gvozditut.ru/products/truba-profilnaya-60-60-2st-3m/">
-          <strong>Труба профильная 60×60×2, 3&nbsp;м</strong>
-          <span>Это столб. Три метра: метр в землю, два метра над землёй.</span>
+        <a class="row pic" href="https://gvozditut.ru/products/truba-profilnaya-60-60-2st-3m/">
+          <img src="assets/photos/truba-60.jpg" alt="Квадратная профильная труба для столба">
+          <span class="txt">
+            <strong>Труба профильная 60×60×2, 3&nbsp;м</strong>
+            <span>Это столб. Три метра: метр в землю, два метра над землёй.</span>
+          </span>
         </a>
-        <a class="row" href="https://gvozditut.ru/products/zaglushka-plastikovaya-kvadratnaya-60-60-chyernaya/">
-          <strong>Заглушка пластиковая 60×60</strong>
-          <span>Крышечка на столб. По одной на каждый столб, чтобы внутрь не лилась вода.</span>
+        <a class="row pic" href="https://gvozditut.ru/products/zaglushka-plastikovaya-kvadratnaya-60-60-chyernaya/">
+          <img src="assets/photos/zaglushka.webp" alt="Чёрная пластиковая заглушка на квадратный столб">
+          <span class="txt">
+            <strong>Заглушка пластиковая 60×60</strong>
+            <span>Крышечка на столб. По одной на каждый столб, чтобы внутрь не лилась вода.</span>
+          </span>
         </a>
-        <a class="row" href="https://gvozditut.ru/products/truba-profilnaya-40-20-1-5st-3m/">
-          <strong>Труба профильная 40×20×1,5, 3&nbsp;м</strong>
-          <span>Это поперечина. На забор высотой 2&nbsp;метра берут три ряда.</span>
+        <a class="row pic" href="https://gvozditut.ru/products/truba-profilnaya-40-20-1-5st-3m/">
+          <img src="assets/photos/truba-40.jpg" alt="Прямоугольная профильная труба для поперечины">
+          <span class="txt">
+            <strong>Труба профильная 40×20×1,5, 3&nbsp;м</strong>
+            <span>Это поперечина. На забор высотой 2&nbsp;метра берут три ряда.</span>
+          </span>
         </a>
         <a class="row" href="https://gvozditut.ru/catalog/1061-metalloprokat/">
           <strong>Весь металлопрокат</strong>
@@ -589,17 +638,26 @@
       <h3 class="lbl" style="margin-top:22px">Перчатки, рулетка и лопата</h3>
       <p>Край листа режет руки. Перчатки кладите каждому, кто берёт этот лист. Рулетка с магнитом сама держится на железе. Если человек копает ямы под столбы сам, ему нужна штыковая лопата: она узкая и входит в землю.</p>
       <div class="links">
-        <a class="row" href="https://gvozditut.ru/products/perchatki-nejlonovye-s-nitrilovym-pokrytiem-lyuks-300/">
-          <strong>Перчатки нейлоновые с нитриловым покрытием Люкс</strong>
-          <span>Мягкие, хорошо держат гладкий лист.</span>
+        <a class="row pic" href="https://gvozditut.ru/products/perchatki-nejlonovye-s-nitrilovym-pokrytiem-lyuks-300/">
+          <img src="assets/photos/perchatki-nitril.jpg" alt="Белые перчатки с синим покрытием ладони">
+          <span class="txt">
+            <strong>Перчатки нейлоновые с нитриловым покрытием Люкс</strong>
+            <span>Мягкие, хорошо держат гладкий лист.</span>
+          </span>
         </a>
-        <a class="row" href="https://gvozditut.ru/products/perchatki-kh-b-dvoynaya-oblivnaya-ladon/">
-          <strong>Перчатки х/б с двойной обливной ладонью</strong>
-          <span>Простые рабочие, если нужен недорогой вариант.</span>
+        <a class="row pic" href="https://gvozditut.ru/products/perchatki-kh-b-dvoynaya-oblivnaya-ladon/">
+          <img src="assets/photos/perchatki-hb.jpg" alt="Хлопковые перчатки с обливной ладонью">
+          <span class="txt">
+            <strong>Перчатки х/б с двойной обливной ладонью</strong>
+            <span>Простые рабочие, если нужен недорогой вариант.</span>
+          </span>
         </a>
-        <a class="row" href="https://gvozditut.ru/products/ruletka-magnitnaya-mika-5mh25mm-jh-565b/">
-          <strong>Рулетка магнитная Mika, 5&nbsp;м</strong>
-          <span>Наша рулетка. Магнит цепляется за лист и за трубу.</span>
+        <a class="row pic" href="https://gvozditut.ru/products/ruletka-magnitnaya-mika-5mh25mm-jh-565b/">
+          <img src="assets/photos/ruletka.png" alt="Рулетка Mika на 5 метров">
+          <span class="txt">
+            <strong>Рулетка магнитная Mika, 5&nbsp;м</strong>
+            <span>Наша рулетка. Магнит цепляется за лист и за трубу.</span>
+          </span>
         </a>
         <a class="row" href="https://gvozditut.ru/products/lopata-shtykovaya-rels-stal-tselnometallicheskiy-cherenok/">
           <strong>Лопата штыковая, рельсовая сталь</strong>
