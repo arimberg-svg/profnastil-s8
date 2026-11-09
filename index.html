@@ -19,9 +19,6 @@
       --muted: #5c5278;
       --font: "Code Next", "Code Next Trial", Arial, Helvetica, sans-serif;
       --head: "Code Next", "Code Next Trial", "Arial Black", Arial, sans-serif;
-      --brown: #45322e;
-      --graphite: #474a51;
-      --zinc: #c8c8c8;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -196,23 +193,16 @@
       font-weight: 800;
       font-size: 0.85rem;
     }
-    .swatch {
-      height: 88px;
+    .sheet-photo {
+      width: 100%;
+      height: 190px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: #fff;
       border-radius: 12px;
       margin-bottom: 12px;
-      border: 1px solid rgba(17, 17, 17, 0.12);
-    }
-    .swatch.brown {
-      background-color: var(--brown);
-      background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0 8px, rgba(0,0,0,0.18) 8px 14px, rgba(255,255,255,0.05) 14px 24px);
-    }
-    .swatch.graphite {
-      background-color: var(--graphite);
-      background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.14) 0 8px, rgba(0,0,0,0.22) 8px 14px, rgba(255,255,255,0.04) 14px 24px);
-    }
-    .swatch.zinc {
-      background-color: #dedede;
-      background-image: repeating-linear-gradient(90deg, #f4f4f4 0 8px, #b5b5b5 8px 14px, #e7e7e7 14px 24px);
+      border: 1px solid rgba(17, 17, 17, 0.08);
     }
     .lbl {
       margin: 0 0 6px;
@@ -564,24 +554,30 @@
       <p class="hint">Листы одинаковые. Отличается только цвет. Смотрите на крышу дома и берите такой же.</p>
       <div class="goods">
         <article class="card">
-          <div class="swatch brown" role="img" aria-label="Образец коричневого цвета RAL 8017"></div>
+          <a href="https://gvozditut.ru/products/profnastil-s8-1-2h2-m-0-45-mm-korichnevyj-ral-8017/">
+            <img class="sheet-photo" src="assets/photos/list-8017.jpg" alt="Коричневый профнастил С8 с мелкой волной">
+          </a>
           <p class="lbl">Коричневый</p>
           <h3>К коричневой крыше</h3>
-          <p>На ценнике: профнастил С8, 1,2×2&nbsp;м, 0,45&nbsp;мм, коричневый RAL&nbsp;8017. На шурупах этот цвет подписан так же: RAL&nbsp;8017, шоколадно-коричневый.</p>
+          <p>На ценнике: <a href="https://gvozditut.ru/products/profnastil-s8-1-2h2-m-0-45-mm-korichnevyj-ral-8017/">профнастил С8, 1,2×2&nbsp;м, 0,45&nbsp;мм, коричневый RAL&nbsp;8017</a>. На шурупах этот цвет подписан так же: RAL&nbsp;8017, шоколадно-коричневый.</p>
           <p class="say">«Крыша коричневая. Берём этот лист и шуруп того же цвета.»</p>
         </article>
         <article class="card">
-          <div class="swatch graphite" role="img" aria-label="Образец серого цвета RAL 7024"></div>
+          <a href="https://gvozditut.ru/products/profnastil-s8-1-2h2-m-0-45-mm-seryj-ral-7024/">
+            <img class="sheet-photo" src="assets/photos/list-7024.jpg" alt="Серый профнастил С8 с мелкой волной">
+          </a>
           <p class="lbl">Серый</p>
           <h3>К серой крыше</h3>
-          <p>На ценнике: профнастил С8, 1,2×2&nbsp;м, 0,45&nbsp;мм, серый RAL&nbsp;7024. Это графит. Он спокойно стоит рядом с серой крышей и тёмными окнами.</p>
+          <p>На ценнике: <a href="https://gvozditut.ru/products/profnastil-s8-1-2h2-m-0-45-mm-seryj-ral-7024/">профнастил С8, 1,2×2&nbsp;м, 0,45&nbsp;мм, серый RAL&nbsp;7024</a>. Это графит. Он спокойно стоит рядом с серой крышей и тёмными окнами.</p>
           <p class="say">«Крыша серая. Берём графит, забор будет с домом одного тона.»</p>
         </article>
         <article class="card">
-          <div class="swatch zinc" role="img" aria-label="Образец оцинкованного листа без краски"></div>
+          <a href="https://gvozditut.ru/products/profnastil-s8-1-2h2-m-0-45-mm-cink/">
+            <img class="sheet-photo" src="assets/photos/list-cink.jpg" alt="Оцинкованный профнастил С8 без краски">
+          </a>
           <p class="lbl">Без краски</p>
           <h3>Серебристый цинк</h3>
-          <p>На ценнике: профнастил С8, 1,2×2&nbsp;м, 0,45&nbsp;мм, цинк. Краски нет, лист светлый, как оцинкованное ведро. Его берут за сарай и туда, где потом будут красить.</p>
+          <p>На ценнике: <a href="https://gvozditut.ru/products/profnastil-s8-1-2h2-m-0-45-mm-cink/">профнастил С8, 1,2×2&nbsp;м, 0,45&nbsp;мм, цинк</a>. Краски нет, лист светлый, как оцинкованное ведро. Его берут за сарай и туда, где потом будут красить.</p>
           <p class="say">«Если будете красить сами, берите цинк. Шуруп тоже светлый, с резинкой.»</p>
         </article>
       </div>
