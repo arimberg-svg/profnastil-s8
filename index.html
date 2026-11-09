@@ -384,6 +384,83 @@
     }
     th { background: var(--soft); font-size: 0.92rem; }
     tr:last-child td { border-bottom: 0; }
+    .pick { display: grid; gap: 16px; margin-top: 14px; }
+    .pick-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 18px;
+      align-items: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .pick-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
+      border-radius: 12px;
+    }
+    .pick-card h3 {
+      margin: 0 0 6px;
+      font-family: var(--head);
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+      color: var(--um);
+    }
+    .pick-card .ex { margin: 0; }
+    .pick-opts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .pick-opts a,
+    .pick-opts .opt {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--soft);
+      border-radius: 12px;
+      padding: 14px 16px;
+      min-height: 118px;
+    }
+    .pick-opts .opt a { background: transparent; padding: 0; min-height: 0; border-radius: 0; }
+    .pick-opts .fallback { margin: 8px 0 0; font-size: 0.95rem; }
+    .pick-opts a:hover { box-shadow: 0 8px 20px rgba(66, 8, 168, 0.12); }
+    .pick-opts .where {
+      display: block;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .pick-opts strong {
+      display: block;
+      margin: 4px 0;
+      font-family: var(--head);
+      font-weight: 800;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      color: var(--um);
+      line-height: 1.1;
+    }
+    .pick-opts .sku { display: block; font-size: 0.98rem; }
+    .scheme-wrap {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 8px 8px 4px;
+      margin: 14px 0 16px;
+      overflow-x: auto;
+    }
+    .scheme { width: 100%; min-width: 680px; height: auto; display: block; }
+    .scheme-wrap figcaption {
+      margin: 2px 10px 10px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
     .qs { display: grid; gap: 10px; }
     .q { padding: 14px 16px; }
     .q button { margin-top: 10px; }
@@ -407,7 +484,7 @@
     @media (max-width: 640px) {
       .top { align-items: flex-start; }
       .brand { flex-direction: column; align-items: flex-start; }
-      .goods, .facts, .minute, .fit, .out, .fields { grid-template-columns: 1fr; }
+      .goods, .facts, .minute, .fit, .out, .fields, .pick-card, .pick-opts { grid-template-columns: 1fr; }
       .pub-date { display: none; }
     }
     @media print {
@@ -508,7 +585,7 @@
           <p class="say">«Если будете красить сами, берите цинк. Шуруп тоже светлый, с резинкой.»</p>
         </article>
       </div>
-      <p class="note">У коричневого и серого листа краска с одной стороны. Эту сторону ставят на улицу. У цинка краски нет ни с одной стороны. Листы несите так, чтобы они не тёрлись лицом друг о друга: царапина потом ржавеет. Мокрый цинк в пачке покрывается белыми пятнами, пусть лежит сухо.</p>
+      <p class="note">У коричневого и серого листа краска с одной стороны. Эту сторону ставят на улицу. У цинка краски нет ни с одной стороны. Листы несите так, чтобы они не тёрлись лицом друг о друга: царапина потом ржавеет. Если цинк намокнет прямо в пачке, на листе выступают белые пятна. Пачку держите в сухом месте.</p>
     </section>
 
     <section id="razgovor">
@@ -516,7 +593,7 @@
       <p class="hint">Спросите по очереди. Ответы сами подскажут, что положить в чек.</p>
       <ol class="steps">
         <li><b>1</b><span>Что закрываете: забор, стену сарая или калитку? Если человек говорит «крышу дома», спокойно ответьте: этот лист для забора. Волна слишком низкая, на крыше дома через неё может затекать вода.</span></li>
-        <li><b>2</b><span>Какая длина забора и подходит ли высота 2&nbsp;метра? Наш лист даёт ровно два метра, если поставить его стоймя. Если надо короче, режут ножницами по металлу. Болгарку использовать нельзя. Длиннее этот лист уже не станет.</span></li>
+        <li><b>2</b><span>Какая длина забора и подходит ли высота 2&nbsp;метра? Наш лист даёт ровно два метра, если поставить его стоймя. Если надо ниже, лист укорачивают ножницами по металлу. Болгарку использовать нельзя. Выше двух метров из этого листа забор не собрать: лист сам двухметровый.</span></li>
         <li><b>3</b><span>Какого цвета крыша? Коричневая крыша: коричневый лист. Серая крыша: серый лист. Забор за сараем или под покраску: цинк.</span></li>
         <li><b>4</b><span>На чём повезёте? Лист длиной 2&nbsp;метра в обычную легковую часто не входит. И сразу положите перчатки: край режет руки.</span></li>
       </ol>
@@ -557,56 +634,117 @@
       <p class="hint">Ссылки ведут на наш сайт. Есть ли товар сейчас, смотрите на карточке. Цена тоже там.</p>
 
       <h3 class="lbl" style="margin-top:18px">Шуруп в цвет листа</h3>
-      <p>Шуруп называется «саморез кровельный». Под шляпкой должна быть резинка: она закрывает дырку, и туда не заходит вода. Цвет шляпки такой же, как у листа. Каркас из железных труб: берите размер 5,5×19. Каркас из деревянного бруска: берите 4,8×35. Резинку прижимают плотно, но лист не продавливают.</p>
-      <div class="goods" style="margin-top:12px">
-        <article class="card">
-          <img class="shot" src="assets/photos/samorez-8017.jpg" alt="Коричневый шуруп с резинкой под шляпкой">
-          <h3>Коричневый</h3>
-          <p>Так выглядит шуруп RAL&nbsp;8017. Резинка уже на нём.</p>
+      <p>Шуруп называется «саморез кровельный». Под шляпкой должна быть резинка: она прижимает лист и не пускает воду под шуруп. Цвет шляпки такой же, как у листа. Каркас из железных труб: берите размер 5,5×19. Каркас из деревянного бруска: берите 4,8×35. Резинку прижимают плотно, но лист не продавливают.</p>
+      <div class="pick">
+        <article class="pick-card">
+          <img src="assets/photos/samorez-8017.jpg" alt="Коричневый шуруп с резинкой под шляпкой">
+          <div>
+            <h3>Коричневый лист RAL&nbsp;8017</h3>
+            <p class="ex">Пример. Крыша коричневая, столбы железные. Берём шуруп 5,5×19 того же цвета.</p>
+            <div class="pick-opts">
+              <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-8017-5-5-19-/">
+                <span class="where">Каркас из труб</span>
+                <strong>5,5×19</strong>
+                <span class="sku">Саморез RAL&nbsp;8017</span>
+              </a>
+              <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-8017-4-8-35-/">
+                <span class="where">Каркас из дерева</span>
+                <strong>4,8×35</strong>
+                <span class="sku">Саморез RAL&nbsp;8017</span>
+              </a>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <img class="shot" src="assets/photos/samorez-7024.jpg" alt="Серый шуруп с чёрной резинкой под шляпкой">
-          <h3>Серый</h3>
-          <p>Так выглядит шуруп RAL&nbsp;7024. Резинка чёрная, шляпка серая.</p>
+        <article class="pick-card">
+          <img src="assets/photos/samorez-7024.jpg" alt="Серый шуруп целиком, с резинкой под шляпкой">
+          <div>
+            <h3>Серый лист RAL&nbsp;7024</h3>
+            <p class="ex">Пример. Крыша серая, каркас из бруска. Берём шуруп 4,8×35, шляпка серая.</p>
+            <div class="pick-opts">
+              <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-7024-5-5-19-/">
+                <span class="where">Каркас из труб</span>
+                <strong>5,5×19</strong>
+                <span class="sku">Саморез RAL&nbsp;7024</span>
+              </a>
+              <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-7024-4-8-35-/">
+                <span class="where">Каркас из дерева</span>
+                <strong>4,8×35</strong>
+                <span class="sku">Саморез RAL&nbsp;7024</span>
+              </a>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <img class="shot" src="assets/photos/samorez-cink.jpg" alt="Светлый цинковый шуруп с резинкой">
-          <h3>Цинк</h3>
-          <p>Светлый шуруп к цинковому листу. Резинка тоже на месте.</p>
+        <article class="pick-card">
+          <img src="assets/photos/samorez-cink.jpg" alt="Светлый цинковый шуруп с резинкой">
+          <div>
+            <h3>Цинковый лист</h3>
+            <p class="ex">Пример. Лист без краски, столбы железные. Берём светлый шуруп 5,5×19.</p>
+            <div class="pick-opts">
+              <div class="opt">
+                <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-tsink-5-5-19/">
+                  <span class="where">Каркас из труб</span>
+                  <strong>5,5×19</strong>
+                  <span class="sku">Светлый шуруп с резинкой</span>
+                </a>
+                <p class="fallback">Если 5,5×19 нет на полке, берите <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-tsink-5-5-32/">цинк 5,5×32</a>.</p>
+              </div>
+              <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-tsink-4-8-35-/">
+                <span class="where">Каркас из дерева</span>
+                <strong>4,8×35</strong>
+                <span class="sku">Светлый шуруп с резинкой</span>
+              </a>
+            </div>
+          </div>
         </article>
       </div>
-      <div class="table-wrap" style="margin-top:10px">
-        <table>
-          <thead>
-            <tr>
-              <th>Лист</th>
-              <th>Каркас из труб</th>
-              <th>Каркас из дерева</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Коричневый RAL&nbsp;8017</td>
-              <td><a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-8017-5-5-19-/">Саморез RAL&nbsp;8017, 5,5×19</a></td>
-              <td><a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-8017-4-8-35-/">Саморез RAL&nbsp;8017, 4,8×35</a></td>
-            </tr>
-            <tr>
-              <td>Серый RAL&nbsp;7024</td>
-              <td><a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-7024-5-5-19-/">Саморез RAL&nbsp;7024, 5,5×19</a></td>
-              <td><a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-ral-7024-4-8-35-/">Саморез RAL&nbsp;7024, 4,8×35</a></td>
-            </tr>
-            <tr>
-              <td>Цинк</td>
-              <td><a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-tsink-5-5-19/">Цинк 5,5×19</a>. Если на полке его нет, берите <a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-tsink-5-5-32/">цинк 5,5×32</a>. Он чуть длиннее, для трубы это нормально.</td>
-              <td><a href="https://gvozditut.ru/products/samorez-krovelnyy-sh-gr-tsink-4-8-35-/">Цинк 4,8×35</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Берите шуруп, у которого под шляпкой есть резинка. Если на карточке написано «без шайбы», этот шуруп для листа не берём: в дырку зайдёт вода. Остальные кровельные шурупы лежат в <a href="https://gvozditut.ru/catalog/1083-samorezy-krovel-nye/">разделе на сайте</a>. Считаем их поштучно.</p>
+      <p class="note">Берите шуруп, у которого под шляпкой есть резинка. Если на карточке написано «без шайбы», этот шуруп для листа не берём: вода заходит под шляпку, и лист в этом месте ржавеет. Остальные кровельные шурупы лежат в <a href="https://gvozditut.ru/catalog/1083-samorezy-krovel-nye/">разделе на сайте</a>. Считаем их поштучно.</p>
 
       <h3 class="lbl" style="margin-top:22px">Столбы и поперечины</h3>
       <p>Столб: квадратная труба 60 на 60, длина 3&nbsp;метра. Около метра уходит в землю, два метра остаются сверху. Это как раз высота нашего листа. Сверху на каждый столб надевают заглушку, чтобы дождь не лился внутрь трубы. Поперёк столбов крепят три трубы 40 на 20, тоже по 3&nbsp;метра: внизу, посередине и вверху. На них и прикручивают лист.</p>
+      <figure class="scheme-wrap">
+        <svg class="scheme" viewBox="0 0 720 500" role="img" aria-labelledby="fence-title">
+          <title id="fence-title">Схема забора: столбы 60 на 60, три поперечины 40 на 20 и лист высотой 2 метра</title>
+          <rect width="720" height="500" fill="#ffffff"/>
+          <rect x="0" y="330" width="720" height="170" fill="#f3f1f6"/>
+          <line x1="16" y1="330" x2="704" y2="330" stroke="#111111" stroke-width="3"/>
+          <text x="24" y="352" fill="#111111" font-family="Arial, sans-serif" font-size="18">земля</text>
+          <g fill="none" stroke="#4208A8" stroke-width="3" opacity="0.85">
+            <path d="M250 108 Q268 140 250 172 T250 236 T250 292"/>
+            <path d="M286 108 Q304 140 286 172 T286 236 T286 292"/>
+            <path d="M322 108 Q340 140 322 172 T322 236 T322 292"/>
+            <path d="M358 108 Q376 140 358 172 T358 236 T358 292"/>
+            <path d="M394 108 Q412 140 394 172 T394 236 T394 292"/>
+            <path d="M430 108 Q448 140 430 172 T430 236 T430 292"/>
+          </g>
+          <rect x="286" y="150" width="100" height="28" rx="4" fill="#ffffff"/>
+          <text x="296" y="170" fill="#4208A8" font-family="Arial, sans-serif" font-size="20" font-weight="700">лист С8</text>
+          <rect x="188" y="64" width="34" height="266" fill="#4208A8"/>
+          <rect x="176" y="40" width="58" height="26" rx="4" fill="#111111"/>
+          <text x="154" y="30" fill="#111111" font-family="Arial, sans-serif" font-size="16">заглушка</text>
+          <rect x="188" y="330" width="34" height="118" fill="#CCCCCC" stroke="#111111" stroke-width="2"/>
+          <rect x="468" y="64" width="34" height="266" fill="#4208A8"/>
+          <rect x="456" y="40" width="58" height="26" rx="4" fill="#111111"/>
+          <text x="446" y="30" fill="#111111" font-family="Arial, sans-serif" font-size="16">заглушка</text>
+          <rect x="468" y="330" width="34" height="118" fill="#CCCCCC" stroke="#111111" stroke-width="2"/>
+          <rect x="222" y="100" width="246" height="16" fill="#111111"/>
+          <rect x="222" y="196" width="246" height="16" fill="#111111"/>
+          <rect x="222" y="300" width="246" height="16" fill="#111111"/>
+          <text x="520" y="114" fill="#111111" font-family="Arial, sans-serif" font-size="18">верх, 40×20</text>
+          <text x="520" y="210" fill="#111111" font-family="Arial, sans-serif" font-size="18">середина, 40×20</text>
+          <text x="520" y="314" fill="#111111" font-family="Arial, sans-serif" font-size="18">низ, 40×20</text>
+          <text x="520" y="160" fill="#5c5278" font-family="Arial, sans-serif" font-size="16">три трубы по 3 м</text>
+          <line x1="78" y1="64" x2="78" y2="330" stroke="#4208A8" stroke-width="2"/>
+          <line x1="70" y1="64" x2="86" y2="64" stroke="#4208A8" stroke-width="2"/>
+          <line x1="70" y1="330" x2="86" y2="330" stroke="#4208A8" stroke-width="2"/>
+          <text x="16" y="200" fill="#4208A8" font-family="Arial, sans-serif" font-size="18" font-weight="700">2 м</text>
+          <line x1="120" y1="340" x2="120" y2="448" stroke="#111111" stroke-width="2"/>
+          <line x1="112" y1="340" x2="128" y2="340" stroke="#111111" stroke-width="2"/>
+          <line x1="112" y1="448" x2="128" y2="448" stroke="#111111" stroke-width="2"/>
+          <text x="16" y="400" fill="#111111" font-family="Arial, sans-serif" font-size="18" font-weight="700">1 м</text>
+          <text x="150" y="478" fill="#111111" font-family="Arial, sans-serif" font-size="18">столб 60×60, вся труба 3 м</text>
+        </svg>
+        <figcaption>Два метра трубы стоят над землёй: на них как раз встаёт лист. Метр уходит в землю. Сверху заглушка. Поперёк три трубы 40 на 20, на них прикручивают лист.</figcaption>
+      </figure>
       <div class="links">
         <a class="row pic" href="https://gvozditut.ru/products/truba-profilnaya-60-60-2st-3m/">
           <img src="assets/photos/truba-60.jpg" alt="Квадратная профильная труба для столба">
@@ -670,11 +808,11 @@
             <span>Для бетона в яму под столб.</span>
           </span>
         </a>
-        <a class="row pic" href="https://gvozditut.ru/products/24782-nozhnicy-po-metallu-pravyj-rez-deli-dl20032/">
-          <img src="assets/photos/nozhnicy.jpg" alt="Ручные ножницы по металлу Deli">
+        <a class="row pic" href="https://gvozditut.ru/products/stayer-nozhnitsy-po-metallu-pryamye-cr-v-250-mm/">
+          <img src="assets/photos/nozhnicy.jpg" alt="Прямые ножницы по металлу Stayer">
           <span class="txt">
-            <strong>Ножницы по металлу Deli, 250&nbsp;мм</strong>
-            <span>Ими укорачивают лист. Болгарку для этого брать нельзя.</span>
+            <strong>Ножницы по металлу Stayer, прямые, 250&nbsp;мм</strong>
+            <span>Ими укорачивают лист по прямой линии. Болгарку для этого брать нельзя.</span>
           </span>
         </a>
       </div>
